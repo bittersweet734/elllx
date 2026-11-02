@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <title>Elaine
+        Game — A little memory adventure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="brand"><span class="logo">◈</span>elaine game</div><button class="theme-toggle" id="theme"
+            aria-label="Switch to dark mode" aria-pressed="false"><span id="theme-icon" aria-hidden="true">☾</span><span
+                id="theme-label">Dark
+                mode</span></button>
+    </header>
+    <section id="start-screen" class="start-screen" aria-labelledby="welcome">
+        <div class="eyebrow">WELCOME TO ELAINE GAME</div>
+        <h1 id="welcome">Ready to find your match?</h1>
+        <p>Choose your
+            challenge, then flip your way<br>through a little memory
+            adventure.</p>
+        <fieldset class="choices">
+            <legend>How many
+                pairs?</legend><label class="choice"><input type="radio" name="pair-count" value="6"><span><strong>6
+                        pairs</strong><small>Easy · 12
+                        cards</small></span></label><label class="choice"><input type="radio" name="pair-count"
+                    value="8" checked><span><strong>8
+                        pairs</strong><small>Classic · 16
+                        cards</small></span></label><label class="choice"><input type="radio" name="pair-count"
+                    value="10"><span><strong>10
+                        pairs</strong><small>Challenge · 20
+                        cards</small></span></label>
+        </fieldset><button id="start-game" class="start-button">Start Game <span aria-hidden="true">→</span></button>
+        <p class="start-hint">Find two identical pictures to make a
+            pair.</p>
+    </section>
+    <main id="game-screen" hidden>
+        <div class="eyebrow">THE MEMORY GARDEN</div>
+        <h1>Good things come in
+            pairs.</h1>
+        <p>Flip two cards. Find the same picture.<br>A small
+            moment to give your memory a little play.</p>
+        <div class="toolbar">
+            <div class="stats">
+                <div class="stat"><small>PAIRS</small><strong id="pairs">0 /
+                        8</strong></div>
+                <div class="stat"><small>MOVES</small><strong id="moves">0</strong></div>
+                <div class="stat"><small>TIME</small><strong id="time">00:00</strong></div>
+            </div>
+            <div class="controls"><select id="level" aria-label="Difficulty" hidden>
+                    <option value="6">Easy · 6 pairs</option>
+                    <option value="8" selected>Classic · 8 pairs</option>
+                    <option value="10">Challenge · 10
+                        pairs</option>
+                </select><button class="restart" id="music-toggle" aria-label="Mute music" aria-pressed="false">Music:
+                    on</button><button class="restart" id="restart">↻ &nbsp; New
+                    game</button></div>
+        </div>
+        <div class="board" id="board" aria-label="Memory cards"></div>
+        <div class="progress">
+            <div id="bar"></div>
+        </div>
+        <div class="foot" role="status" id="status"><span class="dot"></span>Take your time. Every flip
+            is a fresh start.</div>
+    </main>
+    <footer>MADE FOR CURIOUS MINDS &
+        QUIET MOMENTS</footer>
+    <dialog id="win">
+        <h2>A perfect little
+            match.</h2>
+        <p id="result"></p><button id="again">Play
+            again</button>
+    </dialog>
+    <script src="script.js"></script>
+</body>
+
+</html>

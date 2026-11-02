@@ -1,0 +1,1 @@
+Place your MP3 here and name it your-music.mp3. Or change MUSIC_FILE in index.html. No song is bundled yet. Music begins when Start Game is pressed.
